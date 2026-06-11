@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Guillaume Marty — AI Engineer</title>
+<meta name="description" content="Guillaume Marty — AI engineer. Systèmes de trading autonomes, agents LLM et infrastructure AWS minimaliste. Bot Polymarket en production 24/7, détection smart-money, LLM locaux.">
+<meta property="og:title" content="Guillaume Marty — AI Engineer">
+<meta property="og:description" content="Systèmes de trading autonomes, agents LLM, infra AWS minimaliste. Projets en production réelle.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://high-altitude-ai.github.io">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -508,13 +513,41 @@ footer{
         <span class="proj-status s-prod"><span class="s-dot"></span>En production</span>
         <span class="collab-tag">★ collab. Léo Camus / NextGen Labs</span>
       </div>
-      <div class="proj-title">Polymarket Copy-Trading Bot</div>
-      <div class="proj-sub">Bot autonome 24/7 · copy-trading · marchés de prédiction</div>
-      <div class="proj-desc">Système autonome qui copie les trades de wallets leaders sur Polymarket. Tracking multi-wallets, sizing dynamique par catégorie, filtre LLM pré-trade (Groq llama-3.3-70b), dashboard WebSocket temps réel, auto-cashout et refill intelligent. Déployé AWS EC2 + systemd + Cloudflare.</div>
+      <div class="proj-title">Polycondor — Trading System</div>
+      <div class="proj-sub">Bot autonome 24/7 · convergence & smart money · marchés de prédiction</div>
+      <div class="proj-desc">Système autonome qui trade 24/7 sur Polymarket. Détection de convergence entre wallets leaders qualifiés (scan quotidien du top 6000 du leaderboard), détection smart-money par scoring d'anomalie comportementale, sizing dynamique piloté par les données, pipeline stop-loss à 3 étages, dashboard WebSocket temps réel. En production réelle depuis mars 2026 — chaque nouveau signal passe par un mode shadow mesuré avant d'être activé.</div>
       <div class="tags" style="margin-bottom:0.8rem;"><span class="tag">Python 3.12</span><span class="tag">FastAPI</span><span class="tag">Groq LLM</span><span class="tag">AWS EC2</span><span class="tag">WebSocket</span><span class="tag">SQLite</span></div>
       <div class="lang-row"><div class="lang-item"><span class="ldot" style="background:#3572A5"></span>Python</div></div>
     </div>
     <a href="https://github.com/high-altitude-ai/polymarket-bot" class="proj-link" target="_blank">↗ GitHub</a>
+  </div>
+
+  <div class="proj-item rv">
+    <div>
+      <div class="proj-meta">
+        <span class="proj-status s-prod"><span class="s-dot"></span>En production</span>
+      </div>
+      <div class="proj-title">AWS Trading Infra</div>
+      <div class="proj-sub">Infrastructure de production · EC2 1 Go · SRE</div>
+      <div class="proj-desc">L'infrastructure réelle derrière le système de trading : budget mémoire strict sur t3.micro 1 Go, unités systemd durcies (MemoryMax, restart automatique), watchdogs anti-blocage, hot-reload de configuration sans restart, dashboard exposé sans aucun port ouvert via Cloudflare Tunnel. Scripts et patterns réutilisables — environ 9 $/mois tout compris.</div>
+      <div class="tags" style="margin-bottom:0.8rem;"><span class="tag">AWS EC2</span><span class="tag">systemd</span><span class="tag">fail2ban</span><span class="tag">Cloudflare Tunnel</span><span class="tag">Bash</span></div>
+      <div class="lang-row"><div class="lang-item"><span class="ldot" style="background:#89e051"></span>Shell</div></div>
+    </div>
+    <a href="https://github.com/high-altitude-ai/aws-trading-infra" class="proj-link" target="_blank">↗ GitHub</a>
+  </div>
+
+  <div class="proj-item rv">
+    <div>
+      <div class="proj-meta">
+        <span class="proj-status s-open"><span class="s-dot"></span>Open Source</span>
+      </div>
+      <div class="proj-title">Local LLM Rig</div>
+      <div class="proj-sub">Guide hardware · GPU · inférence locale</div>
+      <div class="proj-desc">Guide de terrain pour monter une machine d'inférence LLM locale : calcul VRAM par taille de modèle, stratégie marché de l'occasion (RTX 3090 24 Go), pièges alimentation et refroidissement, installation des drivers CUDA, choix du stack (Ollama, llama.cpp, vLLM) et méthodologie de benchmark honnête.</div>
+      <div class="tags" style="margin-bottom:0.8rem;"><span class="tag">GPU</span><span class="tag">CUDA</span><span class="tag">llama.cpp</span><span class="tag">Ollama</span><span class="tag">vLLM</span></div>
+      <div class="lang-row"><div class="lang-item"><span class="ldot" style="background:#083fa1"></span>Docs</div></div>
+    </div>
+    <a href="https://github.com/high-altitude-ai/local-llm-rig" class="proj-link" target="_blank">↗ GitHub</a>
   </div>
 
   <div class="proj-item rv">
